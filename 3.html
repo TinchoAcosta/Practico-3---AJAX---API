@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>3)_</title>
+    <style>
+        #bothBoton{
+            color: blueviolet;
+        }
+        #nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        #resetBoton{
+            background-color: red;
+            color: white
+        }
+        #genBoton{
+            color: cyan;
+        }
+        #espBoton{
+            color: darkred;
+        }
+        .caja{
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        .equis {
+            font-size: 100px;
+            color: red;
+        }
+        .card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .items{
+            width: 800px;
+            
+        }
+    </style>
+</head>
+<body>
+    <navbar id="nav">
+        <div id="buscador">
+            <input type="search" id="barra" autocomplete="on">
+            <input onclick="filtrarName()" type="button" value="Buscar" id="boton">
+        </div>
+        <div id="especieSec">
+            <label for="opcionesEspecie">Filtrado por especie:</label>
+            <select id="opcionesEspecie" name="opcionesEspecie"></select>
+            <input type="button" id="espBoton" value="Buscar">
+        </div>
+        <div id="genSec">
+            <label for="opcionesGenero">Filtrado por género:</label>
+            <select id="opcionesGenero" name="opcionesGenero"></select>
+            <input type="button" id="genBoton" value="Buscar">
+        </div>
+        <input onclick="filtrarPorAmbas()" type="button" value="Filtrar por ambas" id="bothBoton">
+        <input onclick="reset()" type="button" id="resetBoton" value="RESET">
+    </navbar>
+    <div class="caja">
+        <div id="items" class="items"></div>        
+    </div>
+    <script src="3.js"></script>
+</body>
+</html>
